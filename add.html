@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เพิ่มข้อมูลความสะอาด</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>บันทึกการทำความสะอาด</h2>
+    <p>วันที่: <span id="today"></span></p>
+
+    <form id="cleanForm">
+      <label>ก่อนทำ (ข้อความ):</label><br>
+      <textarea name="beforeText" required></textarea><br>
+
+      <label>รูปก่อนทำ:</label><br>
+      <input type="file" name="beforeImg" accept="image/*"><br><br>
+
+      <label>หลังทำ (ข้อความ):</label><br>
+      <textarea name="afterText" required></textarea><br>
+
+      <label>รูปหลังทำ:</label><br>
+      <input type="file" name="afterImg" accept="image/*"><br><br>
+
+      <button type="submit">บันทึก</button>
+      <button type="button" onclick="location.href='index.html'">กลับ</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("today").innerText = new Date().toLocaleDateString("th-TH");
+    document.getElementById("cleanForm").addEventListener("submit", saveData);
+  </script>
+</body>
+</html>

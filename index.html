@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบรายงานความสะอาด</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>ระบบรายงานความสะอาด</h1>
+    <button onclick="location.href='add.html'">➕ เพิ่มข้อมูล</button>
+    <button onclick="location.href='report.html'">📋 ดูรายงาน</button>
+  </div>
+</body>
+</html>
